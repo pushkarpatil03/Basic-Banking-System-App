@@ -1,0 +1,61 @@
+<% layout('layouts/boilerplate') %> 
+
+<div class="card mb-3" style="max-width: 600px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img class="img-fluid rounded d-block p-2" src="https://p.kindpng.com/picc/s/33-338711_circle-user-icon-blue-hd-png-download.png" alt="#">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title"><strong>User Account Details : </strong></h5>
+          <h5 class="card-text">Customer Name : <%= senderUser.name %></h6>
+          <h5 class="card-text">Account Balance : <%= senderUser.balance %></h6>
+            <p class="card-text"><small class="text-muted">Customer Email : <%= senderUser.email %></small></p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="card mb-3" style="max-width: 600px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img class="img-fluid rounded d-block p-2" src="https://p.kindpng.com/picc/s/33-338711_circle-user-icon-blue-hd-png-download.png" alt="#">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title"><strong>Transferring to Account : </strong></h5>
+          <h5 class="card-text">Customer Name : <%= receiverUser.name %></h6>
+          <h5 class="card-text">Account Balance : <%= receiverUser.balance %></h6>
+          <p class="card-text"><small class="text-muted">Customer Email : <%= receiverUser.email %></small></p>
+        </div>
+      </div>
+    </div>
+</div>
+<br>
+<form action="/customers/<%= senderUser._id %>/<%= receiverUser._id %>?_method=PUT" method="POST"  class="row g-3 validated-form" novalidate>
+    <label for="amount" class="lead form-label mt-3">Enter the transaction amount to be transferred : </label>
+    <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text">₹</span>
+        <input type="number" id="amount" name="amount" class="form-control" aria-label="Amount (to the nearest rupee)" placeholder="Enter Transaction Amount (in ₹)" required>
+        <span class="input-group-text">.00</span>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <div class="col-auto mb-3">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" required>
+          <label class="form-check-label" for="gridCheck">
+            Confirm Money Transfer 
+          </label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <button type="submit" class="btn btn-danger">Make Transfer</button>
+      </div>
+</form>
+
+    <form class="d-inline" action="/">
+        <button class="btn btn-primary">Home</button>
+    </form>
+

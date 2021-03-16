@@ -1,0 +1,69 @@
+<% layout('layouts/boilerplate') %> 
+
+<div class="card borderless mb-3" style="max-width: 720px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img class="img-fluid rounded d-block p-2" src="https://www.flaticon.com/svg/vstatic/svg/61/61135.svg?token=exp=1615823260~hmac=e0adc36e9ff9150abb669de424591c4e" alt="#">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title"><strong>User Account Details : </strong></h3>
+          <h5 class="card-text">Customer Name : <%= user.name %></h5>
+          <h5 class="card-text">Customer Email : <%= user.email %></h5>
+          <h5 class="card-text">Account Balance : <%= user.balance %></h5>
+            <!-- <p class="card-text"><small class="text-muted">Last Transfer 5 days ago.</small></p> -->
+        </div>
+      </div>
+    </div>
+</div>
+<br>
+<h2 class="lead my-3">Click this button to transfer money to another account</h2>
+
+<p>
+    <a class="btn btn-danger" data-bs-toggle="collapse" href="#table2" role="button" aria-expanded="false" aria-controls="table2">Tranfer Money to :</a>
+</p>
+<div class="row">
+    <div class="col">
+        <div class="collapse" id="table2">
+            <div class="card card-body">
+                <table class="table table-striped table-hover table-borderless table-responsive caption-top">
+                    <caption>Lists of Customers :</caption>
+                    <thead class="table-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Current Balance</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    
+                <% for(let current of users){ %>
+            
+                    <% if(!user._id.equals(current._id)){ %>
+                        <tbody>
+                        <tr>
+                            <th scope="row"><%= current.Sno %> </th>
+                            <td><%= current.name %></td>
+                            <td><%= current.email%></td>
+                            <td><%= current.balance%></td>
+                            <td><a href="/customers/<%= user._id %>/<%= current._id %>"><button class="btn btn-info">Transfer Money</button></a> </td>
+                        </tr>
+                        </tbody>
+                    <% } %>
+        
+                <% } %>
+
+                </table>    
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<form class="d-inline" action="/customers">
+    <button class="btn btn-primary">Back</button>
+</form>
+<form class="d-inline" action="/">
+    <button class="btn btn-primary">Home</button>
+</form>
