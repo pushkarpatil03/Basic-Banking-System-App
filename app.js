@@ -1,4 +1,4 @@
-// Project Banking System
+// Project Name : Basic Banking System
 
 if (process.env.NODE_ENV !== "production") {
     require('dotenv').config();
