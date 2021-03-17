@@ -43,7 +43,7 @@ MongoDB session store for Connect and Express written in Typescript.
 ## Installation
 This BankingApp requires [Node.js](https://nodejs.org/) to run.
 
-To run on localhost... install the dependencies and start the server.
+For developement mode... install the dependencies and start the server.
 
 ```sh
 cd BankingApp
@@ -61,7 +61,7 @@ NODE_ENV=production node app
 
 ***
 ## References
-coming soon!!!
+https://www.linkedin.com/posts/pushkar-patil-0197_gripmar21-tsf-grip-activity-6777980224354312192-KQd8
 
 ***
 ## License
