@@ -5,9 +5,9 @@
 A simple dynamic website that has the following specs: A dummy data in the database for up to 15 customers. Database: MongoDB [Mongoose]. Customers table with basic fields such as name, email, current balance, etc. Transfers table with a record of all transfers that happened.
 ***
 ## Routes
-- Home
-- Customers
-- Transfer History
+- ### Home
+- ### Customers
+- ### Transfer History
 
 ***
 ## Packages
