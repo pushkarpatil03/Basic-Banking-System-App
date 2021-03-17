@@ -1,13 +1,22 @@
 # Basic-Banking-System-App
-## _TSF GRIP Project March21_ 
+## _TSF GRIP Project March2021_ 
 ***
 ## Introduction
 A simple dynamic website that has the following specs: A dummy data in the database for up to 15 customers. Database: MongoDB [Mongoose]. Customers table with basic fields such as name, email, current balance, etc. Transfers table with a record of all transfers that happened.
 ***
 ## Routes
 - ### Home
+<img width=500px src="https://user-images.githubusercontent.com/76061323/111433753-b2024e00-8724-11eb-8d13-e891c41581d2.png">
+
 - ### Customers
+<span> 
+<img width=500px src="https://user-images.githubusercontent.com/76061323/111433748-b169b780-8724-11eb-9486-142a15830cf0.png">
+<img width=500px src="https://user-images.githubusercontent.com/76061323/111433746-b0d12100-8724-11eb-8bec-d4f9df43ffba.png">
+<img width=500px src="https://user-images.githubusercontent.com/76061323/111433744-b0388a80-8724-11eb-8b50-5184b5f06f57.png">
+</span>
+
 - ### Transfer History
+<img width=500px src="https://user-images.githubusercontent.com/76061323/111433735-ae6ec700-8724-11eb-80e7-de78b4571756.png">
 
 ***
 ## Packages
