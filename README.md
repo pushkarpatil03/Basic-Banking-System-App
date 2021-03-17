@@ -12,14 +12,23 @@ A simple dynamic website that has the following specs: A dummy data in the datab
 ***
 ## Packages
 - ### nodemon 
+nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
 - ### express
+Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications
 - ### ejs
+Embedded JavaScript templates: EJS is a simple templating language that lets you generate HTML markup with plain JavaScript. 
 - ### ejs-mate
+Express 4.x layout, partial and block template functions for the EJS template engine.
 - ### mongoose
+Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports both promises and callbacks.
 - ### method-override
+Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn’t support it.
 - ### express-session
+It provides you with a nice API to work with sessions (letting you get & set data to the session)
 - ### connect-flash
+The flash is a special area of the session used for storing messages. Messages are written to the flash and cleared after being displayed to the user. 
 - ### connect-mongo
+MongoDB session store for Connect and Express written in Typescript.
 
 ***
 ## Installation
@@ -43,6 +52,7 @@ NODE_ENV=production node app
 
 ***
 ## References
+coming soon!!!
 
 ***
 ## License
